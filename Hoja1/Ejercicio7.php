@@ -11,27 +11,25 @@ and open the template in the editor.
     </head>
     <body>
         <table border>
-        
-        <?php
-        
-        for($i = 0; $i < 5;$i++){
-            
-            echo "<tr>";
-            
-            for($j = 0; $j < 5; $j++){
-                
-                
-                
-                
-            }
-            
-            echo "</tr>";
-            
-        }
-        
-        ?>
 
-      </table>
-      
+            <?php
+            for ($i = 0; $i < 5; $i++) {
+
+                echo "<tr>";
+                
+               echo "adios";
+
+                for ($j = 0; $j < 5; $j++) {
+                    
+                    echo "hola";
+                    
+                }
+
+                echo "</tr>";
+            }
+            ?>
+
+        </table>
+
     </body>
 </html>
