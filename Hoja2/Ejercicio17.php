@@ -18,8 +18,8 @@ and open the template in the editor.
 
             Número:  <input type="text" name = "num"><br>
 
-            <input type ="checkbox" name ="operacion" value="Factorial"/>Factorial<br/>
-            <input type ="checkbox" name ="operacion" value="Sumatorio"/>Sumatorio<br/>
+            <input type ="checkbox" name ="factorial" value="Factorial"/>Factorial<br/>
+            <input type ="checkbox" name ="sumatorio" value="Sumatorio"/>Sumatorio<br/>
             
             <input type="submit" value="Calcular">
             

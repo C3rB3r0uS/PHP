@@ -6,15 +6,15 @@
  * and open the template in the editor.
  */
 
-if(!empty($_REQUEST['Factorial'])){
+if(!empty($_REQUEST["factorial"])){
     
-    echo "Factorial seleccionado";
+    print "Factorial seleccionado";
     
 }
 
-if(!empty($_REQUEST['Sumatorio'])){
+if(!empty($_REQUEST["sumatorio"])){
     
-    echo "Sumatorio seleccionado";
+    print "Sumatorio seleccionado";
     
 }
 
