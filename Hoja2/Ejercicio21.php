@@ -12,16 +12,17 @@ and open the template in the editor.
     </head>
     <body>
 
-        <form action="RecogidaDatos9.php" method="get">
+        <form action="RecogidaDatos21.php" method="get">
+
+           TABLA DE MULTIPLICAR<br> 
+
+            Horizontal:  <input type="text" name = "horizontal"><br>
+            Vertical:  <input type="text" name = "vertical"><br>
             
-            Escribe una cantidad de segundos y la convertiré en minutos y segundos. <br> 
+            <input type="submit" value="Calcular">
             
-            Segundos:  <input type="text" name = "segundos">
-      
-             <input type="submit" value="Convertir">
-            
+
         </form>
 
     </body>
 </html>
-

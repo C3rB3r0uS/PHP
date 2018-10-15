@@ -9,7 +9,6 @@
 $peso = $_REQUEST['peso'];
 $altura = $_REQUEST['altura'];
 
-$total = $peso/pow(($altura/100),2);
 
-echo "Tu IMC es de " . $total;
- 
+
+print "Su IMC es " . ($peso/pow($altura/100,2));

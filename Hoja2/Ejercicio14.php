@@ -12,14 +12,14 @@ and open the template in the editor.
     </head>
     <body>
 
-        <form action="RecogidaDatos8.php" method="get">
-            
-            Pies:  <input type="text" name = "pies">
-            
-            Pulgadas: <input type="text" name = "pulgadas">
-            
-             <input type="submit" value="Convertir">
-            
+        <form action="RecogidaDatos14.php" method="get">
+
+            Escribe un año y calcularé si es bisiesto o no <br> 
+
+            Año:  <input type="text" name = "anio"><br>
+             
+            <input type="submit" value="Calcular">
+
         </form>
 
     </body>

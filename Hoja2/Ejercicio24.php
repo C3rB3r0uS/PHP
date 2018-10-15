@@ -12,14 +12,15 @@ and open the template in the editor.
     </head>
     <body>
 
-        <form action="RecogidaDatos8.php" method="get">
+        <form action="RecogidaDatos24.php" method="get">
+
+           Escribe un número y dibujaré una tabla de una fila con tantas filas como indiques<br> 
+
+            Filas:  <input type="text" name = "filas"><br>
             
-            Pies:  <input type="text" name = "pies">
+            <input type="submit" value="Calcular">
             
-            Pulgadas: <input type="text" name = "pulgadas">
-            
-             <input type="submit" value="Convertir">
-            
+
         </form>
 
     </body>

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -11,16 +10,17 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <?php
+        $v[1] = 90;
+        $v[30] = 7;
+        $v['e'] = 99;
+        $v['hola'] = 43;
 
-        <form action="RecogidaDatos8.php" method="get">
+        foreach ($v as $value) {
             
-            Pies:  <input type="text" name = "pies">
+            print $value . " ";
             
-            Pulgadas: <input type="text" name = "pulgadas">
-            
-             <input type="submit" value="Convertir">
-            
-        </form>
-
+        }
+        ?>
     </body>
 </html>

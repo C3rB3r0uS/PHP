@@ -12,14 +12,15 @@ and open the template in the editor.
     </head>
     <body>
 
-        <form action="RecogidaDatos9.php" method="get">
+        <form action="RecogidaDatos23.php" method="get">
+
+           Escribe un número y dibujaré una tabla de una fila con tantas columnas como indiques<br> 
+
+            Columnas:  <input type="text" name = "columnas"><br>
             
-            Escribe una cantidad de segundos y la convertiré en minutos y segundos. <br> 
+            <input type="submit" value="Calcular">
             
-            Segundos:  <input type="text" name = "segundos">
-      
-             <input type="submit" value="Convertir">
-            
+
         </form>
 
     </body>

@@ -12,15 +12,16 @@ and open the template in the editor.
     </head>
     <body>
 
-        <form action="RecogidaDatos8.php" method="get">
+        <form action="RecogidaDatos22.php" method="get">
+
+           Escribe cuántos valores quieres introducir<br> 
+
+            Cantidad:  <input type="text" name = "cantidad"><br>
             
-            Pies:  <input type="text" name = "pies">
-            
-            Pulgadas: <input type="text" name = "pulgadas">
-            
-             <input type="submit" value="Convertir">
-            
+            <input type="submit" value="Mostrar formulario de entrada">
+           
         </form>
 
     </body>
 </html>
+

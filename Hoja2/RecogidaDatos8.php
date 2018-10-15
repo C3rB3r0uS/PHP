@@ -9,6 +9,11 @@
 $pies = $_REQUEST['pies'];
 $pulgadas = $_REQUEST['pulgadas'];
 
-$total = ($pies*12 + $pulgadas)*2.54;
+echo "Pies introducidos: " . $pies . "<br>";
+echo "Pulgadas introducidas: " . $pulgadas . "<br>";
 
-echo "El total en centímetros es: " . $total;
+$totalPulgadas = $pies*12 + $pulgadas; 
+
+echo "Total pulgadas: " . $totalPulgadas . "<br>";
+
+echo "La conversión es " . $totalPulgadas*2.54 . "<br>";

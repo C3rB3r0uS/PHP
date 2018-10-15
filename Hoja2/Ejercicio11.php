@@ -12,13 +12,14 @@ and open the template in the editor.
     </head>
     <body>
 
-        <form action="RecogidaDatos9.php" method="get">
+        <form action="RecogidaDatos11.php" method="get">
             
-            Escribe una cantidad de segundos y la convertiré en minutos y segundos. <br> 
+            Escribe el dividendo y el divisor y calcularé el cociente y el resto de la división<br> 
             
-            Segundos:  <input type="text" name = "segundos">
+            Dividendo:  <input type="text" name = "dividendo">
+            Divisor:  <input type="text" name = "dividendo">
       
-             <input type="submit" value="Convertir">
+             <input type="submit" value="Calcular">
             
         </form>
 

@@ -6,15 +6,13 @@
  * and open the template in the editor.
  */
 
-if(!empty($_REQUEST["factorial"])){
-    
-    print "Factorial seleccionado";
-    
-}
+$columnas = $_REQUEST['columnas'];
 
-if(!empty($_REQUEST["sumatorio"])){
-    
-    print "Sumatorio seleccionado";
-    
-}
+echo "<table border=2>";
 
+for($i = 1 ; $i <= $columnas ; $i++){
+    
+//    echo "<tr>";
+    echo "<td>$i</td>";
+//    echo "</tr>";
+}

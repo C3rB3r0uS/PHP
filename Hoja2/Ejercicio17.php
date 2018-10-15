@@ -20,12 +20,13 @@ and open the template in the editor.
 
             <input type ="checkbox" name ="factorial" value="Factorial"/>Factorial<br/>
             <input type ="checkbox" name ="sumatorio" value="Sumatorio"/>Sumatorio<br/>
-
+            
             <input type="submit" value="Calcular">
-
+            
 
         </form>
 
     </body>
 </html>
+
 

@@ -12,12 +12,12 @@ and open the template in the editor.
     </head>
     <body>
 
-        <form action="RecogidaDatos8.php" method="get">
+        <form action="RecogidaDatos10.php" method="get">
             
-            Pies:  <input type="text" name = "pies">
+            Escribe una cantidad de segundos y la convertiré en horas, minutos y segundos. <br> 
             
-            Pulgadas: <input type="text" name = "pulgadas">
-            
+            Segundos:  <input type="text" name = "segundos">
+      
              <input type="submit" value="Convertir">
             
         </form>

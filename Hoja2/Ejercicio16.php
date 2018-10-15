@@ -12,16 +12,15 @@ and open the template in the editor.
     </head>
     <body>
 
-        <form action="RecogidaDatos9.php" method="get">
-            
-            Escribe una cantidad de segundos y la convertiré en minutos y segundos. <br> 
-            
-            Segundos:  <input type="text" name = "segundos">
-      
-             <input type="submit" value="Convertir">
-            
+        <form action="RecogidaDatos16.php" method="get">
+
+            Escribe una distancia (en centímetros) y la convertiré en kilómetros, metros y centímetros <br> 
+
+            Distancia:  <input type="text" name = "distancia"><br>
+
+            <input type="submit" value="Convertir">
+
         </form>
 
     </body>
 </html>
-
