@@ -45,46 +45,46 @@ and open the template in the editor.
             <?php
         } else {
 
-            function mostrar_errores($errores) {
-                echo "<ul>";
-                foreach ($errores as $error) {
-                    echo "<li>$error<li>";
-                }
-                echo "</ul>";
-            }
+//            function mostrar_errores($errores) {
+//                echo "<ul>";
+//                foreach ($errores as $error) {
+//                    echo "<li>$error<li>";
+//                }
+//                echo "</ul>";
+//            }
 
-            if (!isset($_POST["nombre"])) {
-                $errores[] = "No se ha recibido nombre";
-            }
-
-            if (!isset($_POST["apellidos"])) {
-                $errores[] = "No se han recibido los apellidos";
-            }
-
-            if (!isset($_POST["edad"])) {
-                $errores[] = "No se ha recibido la edad";
-            } else {
-
-                if ($_POST["edad"] < 18) {
-
-                    $errores[] = "La edad debe ser mayor o igual a 18";
-                }
-            }
-
-            if (!isset($_POST["salario"])) {
-                $errores[] = "No se ha recibido el salario";
-            } else {
-
-                if ($_POST["salario"] < 0) {
-
-                    $errores[] = "El salario debe ser mayor que 0";
-                }
-            }
-
-            if ($errores) {
-                mostrar_errores($errores);
-                echo '<br><a href= " ' . $_SERVER["PHP_SELF"] . ' " >';
-            } else {
+//            if (!isset($_POST["nombre"])) {
+//                $errores[] = "No se ha recibido nombre";
+//            }
+//
+//            if (!isset($_POST["apellidos"])) {
+//                $errores[] = "No se han recibido los apellidos";
+//            }
+//
+//            if (!isset($_POST["edad"])) {
+//                $errores[] = "No se ha recibido la edad";
+//            } else {
+//
+//                if ($_POST["edad"] < 18) {
+//
+//                    $errores[] = "La edad debe ser mayor o igual a 18";
+//                }
+//            }
+//
+//            if (!isset($_POST["salario"])) {
+//                $errores[] = "No se ha recibido el salario";
+//            } else {
+//
+//                if ($_POST["salario"] < 0) {
+//
+//                    $errores[] = "El salario debe ser mayor que 0";
+//                }
+//            }
+//
+//            if ($errores) {
+//                mostrar_errores($errores);
+//                echo '<br><a href= " ' . $_SERVER["PHP_SELF"] . ' " >';
+//            } else {
 
                 $nombre = $_POST["nombre"];
                 $apellidos = $_POST["apellidos"];
@@ -115,7 +115,7 @@ and open the template in the editor.
                 echo $nombre . " " . $apellidos . " , tu salario será de " . $nuevoSalario;
                 
             }
-        }
+        
         ?>
 
     </body>
