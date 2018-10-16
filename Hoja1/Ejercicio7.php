@@ -13,18 +13,16 @@ and open the template in the editor.
         <table border>
 
             <?php
+            echo "<table border=2>";
             for ($i = 0; $i < 5; $i++) {
-
-                echo "<tr>";
-                
-               echo "adios";
-
                 for ($j = 0; $j < 5; $j++) {
-                    
-                    echo "hola";
-                    
+                    if ($i == 0 && $j != 0) {
+                        echo "<td>0,$j</td>";
+                    } else {
+                        $valor = $i + $j * 0.1;
+                        echo "<td>$valor</td>";
+                    }
                 }
-
                 echo "</tr>";
             }
             ?>
