@@ -1,10 +1,10 @@
 <html>
     <head>
-        <title>Tarea</title>
+        <title>Formulario principal</title>
     </head>
     <body>
 
-        <h1>Introduce un nuevo user</h1>
+        <h1>Introduce un nuevo USER</h1>
 
         <?php if (!$_POST) { ?>
 
@@ -14,21 +14,23 @@
                 <strong>Nombre y apellidos de la persona física:</strong><input type="text" name="datosPersona" value="" /><br>
                 <strong>Número de pasaporte de la persona física titular:</strong><input type="text" name="pasaporte" value="" /><br>
                 <strong>Nacionalidad de la persona física:</strong><input type="text" name="nacionalidad" value="" /><br>
+                
+                <input type = "hidden" name="array" value="$s_users"> 
 
-                <input type="submit" value="Introducir" name="intro" />
+                <input type="submit" value="Introducir" name="intro"/>
 
             </form>
 
             <?php
         } else {
-
-            $users = [];
+            
+            include "Formulario.php";
+        
             $errores = [];
 
-            if (isset($_POST["correo"])  && empty($_POST["correo"])) { //comprobación de que existe el campo correo (isset) y de que el campo está vacío (empty)
-
+            if (isset($_POST["correo"]) && empty($_POST["correo"])) { // comprobación de que existe el campo correo (isset) y de que el campo está vacío (empty)
                 $errores[] = "Debes de introducir un correo";
-            } 
+            }
 
             if ($errores) {
 
@@ -42,8 +44,20 @@
                 $datosPersona = $_POST["datosPersona"];
                 $pasaporte = $_POST["pasaporte"];
                 $nacionalidad = $_POST["nacionalidad"];
-
-
+                
+                $users = array(
+                    
+                    $correo => array($datosPersona,$pasaporte,$nacionalidad)
+                    
+                );
+                
+                echo "email introducido : ";
+                
+//                echo "Correo electrónico: " . $correo . "<br/>";
+//                echo "Número de pasaporte: " . $pasaporte . "<br/>";
+              
+                $s_users = serialize($users);
+                
             }
         }
         ?>
