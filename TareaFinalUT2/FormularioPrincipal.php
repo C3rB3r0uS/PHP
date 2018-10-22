@@ -7,6 +7,9 @@
         <h1>Introduce un nuevo USER</h1>
 
         <?php
+        
+        $users = [];
+        
         if (!$_POST) {
 
             include "Formulario.php";
@@ -16,6 +19,8 @@
         } else {
 
             include "Formulario.php";
+            
+            $users = unserialize($_POST["array"]);
 
             $errores = [];
 
@@ -36,28 +41,27 @@
                 $pasaporte = $_POST["pasaporte"];
                 $nacionalidad = $_POST["nacionalidad"];
 
-                $users = array(
-                    $correo => array($datosPersona, $pasaporte, $nacionalidad)
-                );
+                $users[] = array(
+                    $correo => $pasaporte
+                );         
 
-                $s_users = serialize($users);
+               foreach ($users as $value) {
+                    foreach ($value as $valueAux) {
 
-//                foreach ($users as $value) {
-//                    foreach ($value as $valueAux) {
-//
-//                        echo "Datos contenidos " . $valueAux . "<br>";
-//                    }
-//                }
-//
-//                echo "Serializado: " . $s_users . "<br>";
-
-                $array = unserialize($_POST["array"]);
+                        echo "Datos contenidos " . $valueAux . "<br>";
+                    }
+               }
                 
-                foreach ($array as $value) {
-                    
-                    echo "Impresión después de deserializar: " . $array;
-                    
-                }
+//                foreach ($array as $value){
+//                    
+//                    foreach ($value as $valueAux) {
+//                        
+//                        echo "Datos contenidos " . $valueAux . "<br>";
+//                        
+//                    }
+//                    
+//                }
+                          
             }
         }
         ?>
