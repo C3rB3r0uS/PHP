@@ -11,8 +11,7 @@
             <strong>Número de pasaporte de la persona física titular:</strong><input type="text" name="pasaporte" value="" /><br>
             <strong>Nacionalidad de la persona física:</strong><input type="text" name="nacionalidad" value="" /><br>
 
-            <input type = "hidden" name="array" value="<?php echo serialize($users)?>"> 
-            <!--value="$s_users"-->
+            <input type = "hidden" name="array" value="<?php echo serialize($users)?>"/> 
             <input type="submit" value="Introducir" name="intro"/>
 
         </form>
