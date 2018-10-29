@@ -10,6 +10,8 @@
 
 <!--            <strong>Producto: </strong> <input type="text" name="producto" value="" />-->
             
+            <!-- https://www.sitepoint.com/community/t/how-to-create-combo-box-in-php/7105 -->
+            
             <select name="productos">
             </select>
 
