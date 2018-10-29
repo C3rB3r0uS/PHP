@@ -21,8 +21,8 @@ if ($error == null) {
 //    }
     
     $listaProductos = $dwes->query("SELECT DISTINCT producto FROM stock");
-    echo "Se ha realizado la query SELECT: " . "$dwes->affected_rows" . "<br>";
-      
+    echo "Se ha realizado la query SELECT: " . "$dwes->affected_rows" . "<br>";  
+    
 }
 
 
