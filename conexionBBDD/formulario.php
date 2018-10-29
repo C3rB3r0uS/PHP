@@ -14,9 +14,7 @@
 
             <input type="submit" value="Intro" />
 
-
         </form>
-
 
     </body>
 </html>
