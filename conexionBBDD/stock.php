@@ -4,9 +4,9 @@
     </head>
     <body>
 
-        <form action = "recogidaDatosStock.php" method="POST">
+        <form action = "<?= $_SERVER["PHP_SELF"] ?>" method="POST">
 
-            <h1>Consulta de productos</h1>
+            <h1>Ejercicio: Consultas preparadas con MySQLi</h1>
 
 <!--            <strong>Producto: </strong> <input type="text" name="producto" value="" />-->
 
@@ -16,20 +16,22 @@
             $dwes = new mysqli('localhost', 'root', '', 'dwes');
             $error = $dwes->connect_errno;
 
-            if ($error == null) {
+            if ($error == null) {             
 
                 $listaProductos = $dwes->query("SELECT DISTINCT producto FROM stock");
 //                echo "Se ha realizado la query SELECT: " . "$dwes->affected_rows" . "<br>";
 //                print_r($listaProductos) . "<br>";
+                
+                $dwes->close();
+      
+                echo "Producto: ";
 
-                echo '<select name="lista" id="lista">
-	      <option value=" " selected="selected">Elige una opción</option>';
+                echo '<select name="lista" id="lista">';
 
                 foreach ($listaProductos as $value) {
 
                     foreach ($value as $key => $valueAux) {
 
-                        echo "key => " . $key . " value => " . $valueAux . "<br>";
                         echo '<option value="' . $valueAux . '">' . $valueAux . '</option>';
                     }
                 }
@@ -38,9 +40,8 @@
             }
             ?>
 
-            <input type="submit" value="Enviar"/>
-
-
+            <input type="submit" name="stock" value="Mostrar stock"/>
+     
         </form>
 
     </body>
