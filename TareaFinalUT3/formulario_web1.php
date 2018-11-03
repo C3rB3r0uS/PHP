@@ -8,10 +8,45 @@
 
         <form action = "<?= $_SERVER["PHP_SELF"] ?>" method="POST">
 
-
             <?php
 
 //            $valor = 1; 
+
+            function insertClientes($codCliente, $nombreCliente, $dniCliente) {
+
+                $dwes = new mysqli('localhost', 'root', '', 'telefonia');
+                $error = $dwes->connect_errno;
+
+                if ($error == null) {
+
+                    $valorMaxClientes = $dwes->query("INSERT INTO clientes VALUES ('$codCliente','$nombreCliente','$dniCliente')");
+                    echo "Se ha realizado la query: " . "$dwes->affected_rows";
+                }
+            }
+
+            function insertTarjetasTelefonicas($numeroSIM,$codClienteAsociado) {
+
+                $dwes = new mysqli('localhost', 'root', '', 'telefonia');
+                $error = $dwes->connect_errno;
+
+                if ($error == null) {
+
+                    $valorMaxClientes = $dwes->query("INSERT INTO tarjetas_telefonicas VALUES ('$numeroSIM','$codClienteAsociado')");
+                    echo "Se ha realizado la query: " . "$dwes->affected_rows";
+                }
+            }
+
+            function insertLlamadasEmitidas($codLlamada,$simLlamante,$numLlamado,$duracion,$importe) {
+
+                $dwes = new mysqli('localhost', 'root', '', 'telefonia');
+                $error = $dwes->connect_errno;
+
+                if ($error == null) {
+
+                    $valorMaxClientes = $dwes->query("INSERT INTO llamadas_emitidas VALUES ()");
+                    echo "Se ha realizado la query: " . "$dwes->affected_rows";
+                }
+            }
 
             function getValorMaxClientes() {
 
