@@ -7,11 +7,11 @@
         <?php
         if (!$_POST) {
 
-            include "stock.php";
+            include "formularioStock.php";
             
         } else {
 
-            include "stock.php";
+            include "formularioStock.php";
 
             $dwes = new mysqli('localhost', 'root', '', 'dwes');
             $error = $dwes->connect_errno;
