@@ -8,6 +8,7 @@
         if (!$_POST) {
 
             include "formularioStockPDO.php";
+            
         } else {
 
             include "formularioStockPDO.php";
@@ -20,7 +21,7 @@
                 $productoElegido = $_POST["lista"];
                 echo "El valor elegido fue " . $productoElegido . "<br>";
 
-                $resultado = $pdo->query("SELECT * FROM stock WHERE producto LIKE '$productoElegido' ");
+                $resultado = $pdo->query("SELECT * FROM stock WHERE producto LIKE '$productoElegido'");
 
                 while ($registro = $resultado->fetch()) {
 
@@ -36,12 +37,11 @@
                  $productoElegido = $_POST["lista"];
                  $unidadesIntroducidas = $_POST['numProducto'];
                  
-                 $pdo = new PDO('mysql:host=localhost; dbname=dwes', 'root', '');
-                 $resultado = $pdo->query("SELECT * FROM stock WHERE producto LIKE '$productoElegido' ");
+                 $resultado = $pdo->query("SELECT * FROM stock WHERE producto LIKE '$productoElegido'");
                  
                  $contiene = false;
                  
-                 while($registro = $resultado ->fetch()){
+                 while($registro = $resultado->fetch()){
                      
                      if($registro['tienda'] == 1){
                          
@@ -54,12 +54,12 @@
                  if($contiene == true){
                      
                      $actualizar = $pdo->exec("UPDATE stock SET unidades='$unidadesIntroducidas' WHERE producto='$productoElegido' AND tienda=1");
-                     echo "Se han modificado $actualizar registros";
+                     echo "Se han modificado $actualizar registro/s";
                      
                  }else{
                      
                      $insertar = $pdo->exec("INSERT INTO stock values('$productoElegido',1,'$unidadesIntroducidas')");
-                     echo "Se han insertado $insertar registros";
+                     echo "Se han insertado $insertar registro/s";
                      
                  }
                 
