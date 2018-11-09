@@ -23,14 +23,6 @@
                 echo '<option value="' . $registro["producto"] . '">' . $registro["producto"] . '</option>';
             }
 
-//            foreach ($listaProductos as $value) {
-//
-//                foreach ($value as $key => $valueAux) {
-//
-//                    echo '<option value="' . $valueAux . '">' . $valueAux . '</option>';
-//                }
-//            }
-
             echo '</select>';
             ?>
 

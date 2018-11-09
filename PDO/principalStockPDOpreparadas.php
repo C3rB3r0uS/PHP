@@ -22,7 +22,6 @@
 
                 $resultado = $pdo->prepare("SELECT * FROM stock WHERE producto LIKE ?");
                 $resultado->bindParam(1, $productoElegido);
-
                 $resultado->execute();
 
                 while ($registro = $resultado->fetch()) {
@@ -36,6 +35,7 @@
             if (isset($_POST['actualizar'])) {
 
                 $pdo = new PDO('mysql:host=localhost; dbname=dwes', 'root', '');
+                
                 $productoElegido = $_POST["lista"];
                 $unidadesIntroducidas = $_POST['numProducto'];
 
@@ -56,10 +56,8 @@
                 if ($contiene == true) {
 
                     $actualizar = $pdo->prepare("UPDATE stock SET unidades=? WHERE producto=? AND tienda=1");
-
                     $actualizar->bindParam(1, $unidadesIntroducidas);
                     $actualizar->bindParam(2, $productoElegido);
-
                     $actualizar->execute();
                     
                     $filasModificadas = $actualizar->rowCount();
@@ -68,10 +66,8 @@
                 } else {
 
                     $insertar = $pdo->prepare("INSERT INTO stock values(?,1,?)");
-
                     $insertar->bindParam(1, $productoElegido);
                     $insertar->bindParam(2, $unidadesIntroducidas);
-
                     $insertar->execute();
                     
                     $filasModificadas = $insertar->rowCount();
