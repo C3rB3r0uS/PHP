@@ -1,14 +1,16 @@
 <?php
 
-//setcookie('contador',false);
+//setcookie('fecha', false);
+
+setcookie('contador',false);
 
 if (isset($_COOKIE['fecha'])) {
 
     $fechaAntigua = unserialize($_COOKIE['fecha']);
-    $mensaje = 'Fecha del : ' . $_COOKIE['contador'];
+    $mensaje = "Última conexión: " . $fechaAntigua['mday'] . "/" . $fechaAntigua['mon'] . "/" . $fechaAntigua['year'] ." - ".$fechaAntigua['hours'] . ":" . $fechaAntigua['minutes'] . ":" . $fechaAntigua['seconds'];
     
     $fechaNueva = getdate();
-    setcookie('fecha', serialize($fecha));
+    setcookie('fecha', serialize($fechaNueva));
     
 } else {
 

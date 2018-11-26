@@ -16,7 +16,7 @@
 
                 Primera palabra: <input type="text" name="palabra1" value="" /><br>
 
-                Segunda palabra: <input type="text" name="palabra2" value="" /> <br>
+                Segunda palabra: <input type="text" name="palabra2" value="" /><br>
 
                 <input type="submit" value="Comprobar" />
 
