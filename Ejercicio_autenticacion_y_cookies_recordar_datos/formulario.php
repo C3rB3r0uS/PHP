@@ -12,7 +12,7 @@
             <br>
             Contraseña: <input type="password" name="passwd" value="" />
             <br/>
-            <input type="checkbox" name="" value="ON" />Deseo recordar los datos
+            <input type="checkbox" name="recordar" value="ON" />Deseo recordar los datos
             <br/>
             <input type="submit" value="Intro" name="intro"/>
         
