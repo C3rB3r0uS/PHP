@@ -15,7 +15,7 @@ class circulo{
     public function calcularPerimetro(){
         
         $radio = $this->radio;
-        echo "El radio con el que se va a calcular es: " . $radio. "<br>";
+        echo "El radio con el que se va a calcular el perímetro del círculo es: " . $radio. "m <br>";
         return 2*pi()*$radio;
         
     }
@@ -23,7 +23,7 @@ class circulo{
     public function calcularArea(){
         
         $radio = $this->radio;
-        echo "El radio con el que se va a calcular es: " . $radio . "<br>";
+        echo "El radio con el que se va a calcular el área del círculo es: " . $radio . " m <br>";
         return pi()*($radio*$radio);
         
     }
@@ -32,5 +32,5 @@ class circulo{
 
 $circulo = new circulo(3, 1);
 
-echo "El área calculada es: " . $circulo->calcularArea() . "<br/>";
-echo "El perímetro calculado es: " . $circulo->calcularPerimetro() . "<br/>";
+echo "El área calculada es: " . $circulo->calcularArea() . " m2 <br/>";
+echo "El perímetro calculado es: " . $circulo->calcularPerimetro() . " m <br/>";

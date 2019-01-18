@@ -30,6 +30,6 @@ class enlace {
 
 }
 
-$link = new Enlace ('Pinche aquí','google.es');
+$link = new Enlace ('Pinche aquí','google.com');
 
 $link ->getEnlace();

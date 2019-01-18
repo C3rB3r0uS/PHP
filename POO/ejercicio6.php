@@ -42,9 +42,7 @@ class SelectRadio extends Select{
     }
 
     public function imprimir() {
-        
-        //$this->opciones = array();
-        
+                
         echo "<form>";
         
         foreach ($this->opciones as $key => $value) {
@@ -58,16 +56,6 @@ class SelectRadio extends Select{
         
     }
     
-}
-
-class lineaDeFormulario extends Select{
-    
-    
-    
-    public function imprimir() {
-        
-    }
-
 }
 
 $opciones = array();
