@@ -55,9 +55,9 @@ class freelance{
             $diaActual = $fechaActual['mday'];
             
             $diasDeTrabajo = $diaActual - $this->comienzoTrabajo;
-            $facturaTotal = $diasDeTrabajo * 24 * $this->precioHora;
+            $facturaTotal = $diasDeTrabajo * 8 * $this->precioHora;
             
-            echo "La factura es (suponiendo que trabaje las 24h del día): " . $facturaTotal ."€";
+            echo "La factura es (suponiendo que trabaje 8h al día): " . $facturaTotal ."€";
             
         }
         
@@ -65,7 +65,9 @@ class freelance{
     
     function getInfo(){
         
-        echo "<h1>Datos del trabajador</h1><br>";
+        $fechaActual = getDate();
+        
+        echo "<h1><u>Datos del trabajador</u></h1><br>";
         
         echo "Nombre del trabajador: " . $this->nombre . "<br>";
         echo "¿ Está ocupado ?: ";
@@ -73,6 +75,7 @@ class freelance{
         echo "<br>";
         echo "Precio/hora: " . $this->precioHora . "<br>";
         echo "Día de comienzo: " . $this->comienzoTrabajo . "<br>";
+        echo "Día actual: " . $fechaActual['mday'] . "<br>";
         
     }
     
@@ -85,6 +88,6 @@ $dia = array();
 $freelance->desarrollar($dia);
 
 $freelance->getInfo();
-//echo "Ocupación: " . $ocupacion;
+echo "Ocupación: " . $freelance->ocupacion . "<br>";
 $freelance->parar();
 
